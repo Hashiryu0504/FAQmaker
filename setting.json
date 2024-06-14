@@ -1,0 +1,11 @@
+{
+    "keypass":"C:\\envi\\credentials-file.json",
+    "storage":"pushstorage",
+    "recofile":"sound",
+    "timeout":1200,
+    "retries":5,
+    "textfile":"text",
+    "csvfile":"csv",
+    "model":"gemini-1.5-pro-latest",
+    "faqfile":"faq"
+}
