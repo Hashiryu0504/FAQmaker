@@ -1,4 +1,12 @@
-sound/*
-csv/*
-faq/*
-text/*
+!/sound/
+!/csv/
+!/faq/
+!/text/
+/sound/*
+/csv/*
+/faq/*
+/text/*
+!/sound/.gitkeep
+!/csv/.gitkeep
+!/faq/.gitkeep
+!/text/.gitkeep
