@@ -9,7 +9,7 @@
 ```
 
 ## 環境設定
-SDKの設定は略
+SDKの設定は省略します
 IAMからユーザーにロールとして
 [その他]>[Cloud Speechクライアント]
 [Cloud Storage]>[Storageオブジェクト管理者]
@@ -23,13 +23,7 @@ StorageはSTTのために利用するだけなのでライフサイクルで自�
 環境変数はenvi下に置いてるjsonを参照
 サービスアカウントから鍵を追加し，ここに指定された場所においてください
 また、キーにGeminiから取ってきたキーを`Gemini_key`として追加してください
-```
-    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'C:\\envi\\credentials-file.json'
-    credentials_path = os.environ['GOOGLE_APPLICATION_CREDENTIALS']
-    with open(credentials_path, 'r') as file:
-        credentials = json.load(file)
-    project_id = credentials.get('project_id')
-```
+
 
 # ファイル
 
@@ -37,6 +31,12 @@ StorageはSTTのために利用するだけなのでライフサイクルで自�
 音声ファイル一覧
 ここに保存された音声を全てFAQに変換します
 mp3以外は対応してないためwavとか使いたいなら書き換えてください
+## text
+STTで文字起こしされたものがこの中に格納されます
+## csv
+textに文字起こししたものを元にGeminiが対話形式に分割したものをcsvで保存します
+## faq
+Q&Aの形式に加工したものをこの中に保存しています
 
 ## reco2text.py
 Cloud Storageに送信し，音声変換を行います
