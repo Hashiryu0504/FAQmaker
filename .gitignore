@@ -1,8 +1,8 @@
-
+!/sound/
 !/csv/
 !/faq/
 !/text/
-
+/sound/*
 /csv/*
 /faq/*
 /text/*
@@ -10,3 +10,4 @@
 !/csv/.gitkeep
 !/faq/.gitkeep
 !/text/.gitkeep
+merged_faq.txt

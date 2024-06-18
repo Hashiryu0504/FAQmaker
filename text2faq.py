@@ -98,7 +98,7 @@ if __name__ == "__main__":
     model = configure_model(GEMINI_KEY, settings['model'])
     prompt_template_txt2csv, prompt_template_csv2faq = load_prompts()
 
-    # process_txt_to_csv(settings['textfile'], settings['csvfile'], prompt_template_txt2csv, model)
+    process_txt_to_csv(settings['textfile'], settings['csvfile'], prompt_template_txt2csv, model)
     process_csv_to_faq(settings['csvfile'], settings['faqfile'], prompt_template_csv2faq, model)
 
     print("Finished processing all text files.")
